@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid | css</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #root {background: aqua;
+        display: grid;
+        grid-template-areas: 
+        'header header'
+        'aside main'
+        'footer footer';
+        width: 1250px;
+        margin: 0 auto;
+        grid-template-rows: 100px 300px 100px;
+        grid-template-columns: 250px 1000px;
+        justify-content: center;
+        gap: 10px;
+    }
+        #root *{border: 1px red solid;}
+        #root header {grid-area:header;}
+        #root aside {grid-area:aside;}
+        #root main {grid-area:main}
+        #root footer {grid-area: footer;}
+
+
+
+
+
+        /* ------------------- */
+        .grid {
+            border:2px solid #000;
+            display: grid; grid-template-columns: 100px 200px 300px 20px;
+            grid-template-rows: 50px repeat(2 , 100px);
+        }
+        .grid li {background: purple;}
+        .grid li:nth-child(odd) {background: pink;}
+    </style>
+</head>
+<body>
+    <div id="root">
+        <header>
+            header
+        </header>
+        <aside>
+            aside
+        </aside>
+        <main>
+            main
+        </main>
+        <footer>
+            footer
+        </footer>
+    </div>
+    <ul class="grid">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+</body>
+</html>

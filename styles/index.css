@@ -1,0 +1,270 @@
+#wrap {}
+/* ========================================1행 main======================================== */
+
+#wrap .row1 {
+    background-image: url(../images/main_bg.png);
+    position: relative;
+}
+#wrap .row1::after {
+    content: '';
+    display: block;
+    width:100% ; height: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:100; /* position 선택속성 */
+}
+#wrap .row1 #visual {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    position: relative;
+    gap: 100px;
+}
+#wrap .row1 #visual .logo {
+    
+    position: absolute;
+    left: 0;
+    top : 0;
+}
+#wrap .row1 #visual .logo a {
+}
+#wrap .row1 #visual .logo a  img {}
+#wrap .row1 #visual .title {
+    color: var(--color-white);
+    font-size: var(--d-title-70);
+    text-align: center;
+}
+#wrap .row1 #visual .title em {
+    font-weight: var(--weight-bold);
+}
+#wrap .row1 #visual .donate_btn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#wrap .row1 #visual .donate_btn img {
+}
+#wrap .row1 #visual .title em {}
+#wrap .row1 #visual .qna_btn {
+    color: var(--color-white);
+    width: 420px;
+    height: 60px;
+    background-color: var(--color-black);
+    border-radius: 30px;
+    font-size: var(--d-qna-26);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#wrap .row1 #visual .qna_btn img {}
+#wrap .row1 #visual .qna_btn span {}
+
+/* ========================================2행 quiz======================================== */
+
+#wrap .row2 {
+    background-image: url(../images/quiz_bg.png);
+}
+#wrap .row2 #quiz {}
+#wrap .row2 #quiz {
+    border:  1px solid red;
+    display: grid;
+    grid-template-areas:
+    'A B';
+    grid-template-columns: repeat(2, 1fr);
+    height: max-content;
+}
+#wrap .row2 #quiz > * {border:  1px solid red;
+    color: var(--color-white);
+}
+
+/* 2행 - 1 */
+#wrap .row2 #quiz .quiz_list {grid-area:A;
+}
+#wrap .row2 #quiz .quiz_list h2 {
+    width: 395px;
+}
+#wrap .row2 #quiz .quiz_list p {
+    margin-bottom: 20px;
+}
+#wrap .row2 #quiz .quiz_list form {
+}
+#wrap .row2 #quiz .quiz_list form .list {}
+#wrap .row2 #quiz .quiz_list form .list li {/* 
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content: flex-start;
+    align-items: center; */
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+#wrap .row2 #quiz .quiz_list form .list li:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+}
+#wrap .row2 #quiz .quiz_list form .list li input {}
+#wrap .row2 #quiz .quiz_list form .list li input[id^=q] {display:none;}
+#wrap .row2 #quiz .quiz_list form .list li input[id^=q]:checked+label {
+    background-image: url(../images/check_on.png);
+}
+#wrap .row2 #quiz .quiz_list form .list li > label {
+    background-image: url(../images/check_off.png);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    line-height: 30px;
+    display: inline-block;
+}
+#wrap .row2 #quiz .quiz_list form #quiz_answer_btn {
+    background-color: var(--color-black);
+    line-height: var(--line-130);
+    width: 395px;
+    height: 50px;
+    border-radius: 25px;
+}
+#wrap .row2 #quiz .quiz_list form #quiz_answer_btn span {
+    color: var(--color-white);
+    line-height: var(--line);
+}
+
+/* 2행 - 2 */
+#wrap .row2 #quiz .quiz_current {grid-area:B;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#wrap .row2 #quiz .quiz_current .status {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    right: 0;
+}
+#wrap .row2 #quiz .quiz_current .status dt {
+    background:linear-gradient(var(--color-pale_orange2,--color-vivid_orange1));
+    text-align: center;
+    padding: 15px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#wrap .row2 #quiz .quiz_current .status dt img {}
+#wrap .row2 #quiz .quiz_current .status dt img span {}
+#wrap .row2 #quiz .quiz_current .status dd {
+    padding: 50px 100px;
+    background:var(--color-white);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: var(--d-donate-34);
+    color: var(--color-black);
+    font-weight: var(--weight-semibold);
+}
+#wrap .row2 #quiz .quiz_current .status dd em {
+    font-size: var(--d-title-70);
+    color: var(--color-pale_orange2);
+    font-weight: var(--weight-bold);
+}
+#wrap .row2 #quiz .quiz_current .status dd span {
+    color: var(--color-pale_orange2);
+    font-weight: var(--weight-semibold);
+    font-size: var(--d-donate-34);
+    margin-right: 5px;
+}
+#wrap .row2 #quiz .quiz_current p {
+    font-weight: var(--weight-semibold);
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+}
+
+/* ========================================3행 video======================================== */
+
+#wrap .row3 {background-image: url(../images/video_bg.png);}
+#wrap .row3 .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#wrap .row3 .container h2 {
+    font-weight: var(--weight-semibold);
+    margin: 0 0 100px;
+}
+#wrap .row3 .container iframe {
+    width: 1250px;
+    height: 700px;
+    margin: 0 0 100px;
+}
+#wrap .row3 .container .donate_btn {
+}
+#wrap .row3 .container .donate_btn img {}
+
+/* ========================================4행 reduce======================================== */
+
+#wrap .row4 {background-image: url(../images/50_bg.png);}
+#wrap .row4 #reduce {color: var(--color-white);
+height: max-content;}
+#wrap .row4 #reduce h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#wrap .row4 #reduce h2 em {
+    color: var(--color-black);
+    font-weight: var(--weight-bold);
+    position: relative;
+}
+
+#wrap .row4 #reduce h2 em::after {
+    content: ''; display: inline-block;
+    background-color: var(--color-white);
+    position: absolute;
+    left: 0; top: 0; width: 100%;
+}
+
+#wrap .row4 #reduce p{margin-bottom: 30px;}
+#wrap .row4 #reduce p img{
+}
+
+/* ========================================5행 crime======================================== */
+
+#wrap .row5 {background-color: var(--color-f5gray);}
+#wrap .row5 .container {}
+#wrap .row5 .container h2 {}
+#wrap .row5 .container p {}
+#wrap .row5 .container .card_list {}
+#wrap .row5 .container .card_list .card {}
+
+/* card -1 */
+
+#wrap .row5 .container .card_list .card:nth-child(1) {}
+#wrap .row5 .container .card_list .card:nth-child(1) dl {}
+#wrap .row5 .container .card_list .card:nth-child(1) dl dt {}
+#wrap .row5 .container .card_list .card:nth-child(1) dl dd {}
+#wrap .row5 .container .card_list .card:nth-child(1) p {}
+
+/* card -2 */
+
+#wrap .row5 .container .card_list .card:nth-child(2) {}
+#wrap .row5 .container .card_list .card:nth-child(2) dl{}
+#wrap .row5 .container .card_list .card:nth-child(2) dl dt {}
+#wrap .row5 .container .card_list .card:nth-child(2) dl dd {}
+#wrap .row5 .container .card_list .card:nth-child(2) p {}
+
+/* card -3 */
+
+#wrap .row5 .container .card_list .card:nth-child(3) {}
+#wrap .row5 .container .card_list .card:nth-child(3) dl {}
+#wrap .row5 .container .card_list .card:nth-child(3) dl dt {}
+#wrap .row5 .container .card_list .card:nth-child(3) dl dd {}
+#wrap .row5 .container .card_list .card:nth-child(3) p {}
