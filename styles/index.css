@@ -22,14 +22,13 @@
     justify-content: center;
     align-items: center;
     z-index: 200;
-    position: relative;
     gap: 100px;
 }
 #wrap .row1 #visual .logo {
     
     position: absolute;
     left: 0;
-    top : 0;
+    top : 50px;
 }
 #wrap .row1 #visual .logo a {
 }
@@ -66,7 +65,7 @@
     gap: 10px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 50px;
 }
 #wrap .row1 #visual .qna_btn img {}
 #wrap .row1 #visual .qna_btn span {}
@@ -220,8 +219,6 @@ height: max-content;}
 }
 
 #wrap .row4 #reduce h2 em {
-    color: var(--color-black);
-    font-weight: var(--weight-bold);
     position: relative;
 }
 
@@ -229,9 +226,14 @@ height: max-content;}
     content: ''; display: inline-block;
     background-color: var(--color-white);
     position: absolute;
-    left: 0; top: 0; width: 100%;
+    left: 0; top: 0; width: 100%; height: 100%;
+    z-index: 10;
 }
-
+#wrap .row4 #reduce h2 em span {
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    z-index: 11; position: relative;
+}
 #wrap .row4 #reduce p{margin-bottom: 30px;}
 #wrap .row4 #reduce p img{
 }
@@ -239,16 +241,68 @@ height: max-content;}
 /* ========================================5행 crime======================================== */
 
 #wrap .row5 {background-color: var(--color-f5gray);}
-#wrap .row5 .container {}
+#wrap .row5 .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
 #wrap .row5 .container h2 {}
-#wrap .row5 .container p {}
-#wrap .row5 .container .card_list {}
+#wrap .row5 .container > p {
+    font-size: var(--d-content-20);
+    text-align: center;
+}
+#wrap .row5 .container .card_list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); gap: 25px;
+
+}
 #wrap .row5 .container .card_list .card {}
+
+#wrap .row5 .container .card_list .card dl::after {
+    background: linear-gradient(var(--color-black), transparent);
+    content: ''; display: block;
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    z-index: 90;
+}
+
+#wrap .row5 .container .card_list .card dl {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 320px;
+    position: relative;
+    color: var(--color-white);
+}
+#wrap .row5 .container .card_list .card dl dt {
+    z-index: 100;
+    font-size: var(--d-donate-34);
+    font-weight: var(--weight-semibold);
+    margin-bottom: 20px;
+}
+#wrap .row5 .container .card_list .card dl dd {
+    z-index: 100;
+    font-size: var(--d-content-20);
+}
+#wrap .row5 .container .card_list .card p {
+    width: 400px;
+    height: 210px;
+    padding: 20px;
+    background-color: var(--color-white);
+    line-height: var(--line-130);
+    font-size: var(--d-content-20);
+}
 
 /* card -1 */
 
 #wrap .row5 .container .card_list .card:nth-child(1) {}
-#wrap .row5 .container .card_list .card:nth-child(1) dl {}
+#wrap .row5 .container .card_list .card:nth-child(1) dl {
+    background-image: url(../images/card_crisis_1.png) ;
+}
 #wrap .row5 .container .card_list .card:nth-child(1) dl dt {}
 #wrap .row5 .container .card_list .card:nth-child(1) dl dd {}
 #wrap .row5 .container .card_list .card:nth-child(1) p {}
@@ -256,7 +310,9 @@ height: max-content;}
 /* card -2 */
 
 #wrap .row5 .container .card_list .card:nth-child(2) {}
-#wrap .row5 .container .card_list .card:nth-child(2) dl{}
+#wrap .row5 .container .card_list .card:nth-child(2) dl{
+    background-image: url(../images/card_crisis_2.png);
+}
 #wrap .row5 .container .card_list .card:nth-child(2) dl dt {}
 #wrap .row5 .container .card_list .card:nth-child(2) dl dd {}
 #wrap .row5 .container .card_list .card:nth-child(2) p {}
@@ -264,7 +320,10 @@ height: max-content;}
 /* card -3 */
 
 #wrap .row5 .container .card_list .card:nth-child(3) {}
-#wrap .row5 .container .card_list .card:nth-child(3) dl {}
+#wrap .row5 .container .card_list .card:nth-child(3) dl {
+    background-image: url(../images/card_crisis_3.png);
+}
 #wrap .row5 .container .card_list .card:nth-child(3) dl dt {}
 #wrap .row5 .container .card_list .card:nth-child(3) dl dd {}
-#wrap .row5 .container .card_list .card:nth-child(3) p {}
+#wrap .row5 .container .card_list .card:nth-child(3) p {
+}
