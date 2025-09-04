@@ -1,0 +1,187 @@
+/* 태블릿 */
+@media screen and (max-width:1250px) {
+    /* 전체 너비가 가변형, 좌우 여백 80px */
+    /* 공통 */
+    #wrap .bg .container h2 {
+        font-size: var(--t-subtitle-40);
+    }
+    #wrap .bg {padding: 100px 80px;}
+    /* ======================= 1행 ======================= */
+    #wrap .row1 {padding: 0 80px;}
+    #wrap .row1 #visual .title {font-size: var(--t-title-50);}
+    #wrap .bg .container .donate_btn {
+        font-size:var(--tm-donate-22);
+        width: 300px;
+        height: 60px;
+        padding: 20px;
+
+    }
+    #wrap .bg .container .donate_btn img {
+        height: 22px;
+        transform: translateY(2px);
+    }
+    #wrap .row1 #visual .qna_btn {
+        font-size: var(--tm-qna-20);
+    }
+    /* ======================= 2행 ======================== */
+    #wrap .bg .container h2+p {
+        font-size: var(--t-content-16);
+    }
+    #wrap .row2 #quiz .quiz_current .status dt {
+        font-size: var(--tm-donate-22);
+    }
+    #wrap .row2 #quiz .quiz_current .status dt img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        transform: translateY(3px);
+    }
+
+    #wrap .row2 #quiz .quiz_list form #quiz_answer_btn {
+        width: 300px;
+        height: 50px;
+    }
+    #wrap .row2 #quiz .quiz_current .status dd {
+        font-size: var(--tm-donate-22);
+        padding: 50px;
+    }
+    #wrap .row2 #quiz .quiz_current .status dd em{
+        font-size:var(--t-subtitle-40)
+    }
+    #wrap .row2 #quiz .quiz_current .status dd span {
+        font-size: var(--tm-donate-22);
+    }
+    #wrap .row2 #quiz .quiz_current p {
+        font-size: var(--t-content-16);
+    }
+
+    /* ======================= 3행 ======================== */
+    #wrap .row3 .container h2 {
+    }
+    #wrap .row3 .container iframe {
+        width: 100%;
+        height:486px ;
+    }
+    /* ======================= 4행 ======================== */
+    #wrap .row4 #reduce p img{
+        width: 100%;
+    }
+    /* ======================= 5행 ======================== */
+    #wrap .row5 .container .card_list .card dl {
+        padding: 50px 0;
+    }
+    #wrap .row5 .container .card_list .card dl dt {
+        font-size: var(--t-subtitle-40);
+    }
+    #wrap .row5 .container .card_list .card dl dd {
+        font-size: var(--t-content-16);
+    }
+    #wrap .row5 .container .card_list .card p {
+        font-size: var(--t-content-16);
+    }
+}
+
+/* ================= 모바일 ================ */
+@media screen and (max-width:849px) {
+    /* ======================= 공통 ======================= */
+    #wrap .bg {
+        padding: 50px 15px;
+        min-width: 320px;
+    }
+    #wrap .bg .container h2 {
+        font-size: var(--m-subtitle-25);
+    }
+    /* ======================= 1행 ======================= */
+    #wrap .row1 {padding: 0 15px;}
+    #wrap .row1 #visual {
+        gap:50px;
+    }
+    #wrap .row1 #visual .logo {
+        top : 150px;
+    }
+    #wrap .row1 #visual .title {font-size: var(--m-title-30);}
+    #wrap .bg .container .donate_btn {
+        font-size:var(--tm-donate-22);
+        width: 300px;
+        height: 60px;
+        padding: 20px;
+
+    }
+    #wrap .bg .container .donate_btn img {
+        height: 22px;
+        transform: translateY(2px);
+    }
+    #wrap .row1 #visual .qna_btn {
+        font-size: var(--tm-qna-20);
+        bottom: 150px;
+    }
+    #wrap .row1 #visual .qna_btn img:nth-child(1) {display: none}
+    /* ======================= 2행 ======================= */
+
+        
+    #wrap .row2 #quiz {
+        display: grid;
+        grid-template-areas:
+        'A'
+        'B';
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #wrap .row2 #quiz .quiz_list h2 {
+        width: 100%;
+    }
+
+    #wrap .row2 #quiz .quiz_list p {
+        margin-bottom: 10px;
+    }
+    #wrap .row2 #quiz .quiz_list form #quiz_answer_btn {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+    }
+    #wrap .row2 #quiz .quiz_current {
+        grid-area:B; height: max-content;
+    }
+    #wrap .row2 #quiz .quiz_current .status {float: none;
+        margin: 40px auto 0;
+    }
+
+    #wrap .row2 #quiz .quiz_current p {float: none;
+        text-align: center;
+        
+    }
+
+    /* ======================= 3행 ======================= */
+    #wrap .row3 .container iframe {
+        width: 100%;
+        height:230px ;}
+    /* ======================= 4행 ======================= */
+    /* ======================= 5행 ======================= */
+    
+    #wrap .row5 .container {height: max-content;}
+    #wrap .row5 .container .card_list {
+        grid: none;
+        width: 100%;
+    }
+    #wrap .row5 .container .card_list .card dl {
+        padding: 60px 0;
+        max-width: 100%;
+        height: max-content;
+    }
+    #wrap .row5 .container .card_list .card:nth-child(1) dl{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+    #wrap .row5 .container .card_list .card:nth-child(2) dl{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+    #wrap .row5 .container .card_list .card:nth-child(3) dl{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

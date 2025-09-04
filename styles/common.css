@@ -47,14 +47,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 170px 0;
-} /* 반복되는 백그라운드 너비 위치 등등 */
+    padding: 100px 80px;}
+ /* 반복되는 백그라운드 너비 위치 등등 */
 #wrap .bg .container {
     max-width: 1250px; min-width: 320px;
     margin: 0 auto;
-    background : rgba(255, 255, 0, 0.5);/* test */
     height: 100vh;
 }
+
+
 #wrap .bg .container .donate_btn {
     background: linear-gradient(var(--color-pale_orange2),var(--color-vivid_orange1));
     border-radius: 50px;
@@ -64,10 +65,11 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    padding : 20px 100px;
+    padding : 20px;
     font-weight: var(--weight-bold);
     font-size: var(--d-qna-26);
     color: var(--color-white);
+    gap: 10px;
 }
 
 #wrap .bg .container .donate_btn img {
@@ -78,7 +80,7 @@
     font-size: var(--d-subtitle-55);
     line-height: var(--line-130);
     font-weight: var(--weight-semibold);
-    letter-spacing: var(--letter-minus2);
+    letter-spacing: var(--letter-minus2,0);
 }
 #wrap .bg .container h2+p {
     font-size: var(--d-content-20);
